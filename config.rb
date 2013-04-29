@@ -5,7 +5,7 @@
 # Set this to the root of your project when deployed:
 http_path = "/"
 css_dir = "assets/stylesheets"
-sass_dir = "assets/stylesheets/sass"
+sass_dir = "assets/stylesheets/scss"
 images_dir = "assets/images"
 javascripts_dir = "assets/javascripts"
 
