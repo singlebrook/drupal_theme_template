@@ -1,0 +1,240 @@
+// ==================================================
+// forms
+// ==================================================
+form {
+	margin: 20px 0;
+}
+
+fieldset {
+	margin: 0 0 10px 0;
+	padding: 0 0 10px 0;
+	border: 0;
+	border-bottom: 1px solid #eee;
+}
+
+label, legend {
+	display: block;
+	font-weight: bold;
+}
+
+li label {
+	font-size: inherit;
+}
+
+label span,
+legend span {
+	font-weight: normal;
+	font-size: inherit;
+	color: $label-color;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="datetime-local"],
+input[type="number"],
+input[type="tel"],
+input[type="datetime"],
+input[type="date"],
+input[type="month"],
+input[type="search"],
+input[type="file"],
+input[type="range"],
+input[id="text_inline"],
+textarea, {
+	border: 1px solid $input-border;
+	padding: 6px 4px;
+	outline: none;
+	color: $input-color;
+	margin: 0;
+	min-width: 210px;
+	max-width: 100%;
+	min-height: 25px;
+	display: block;
+	margin-bottom: 20px;
+	background: $input-bg;
+	font-size: 12px;
+
+	&:focus {
+		line-height: normal;
+		cursor: pointer;
+		background-color: transparent;
+	}
+}
+
+// Removes the red outline
+input:invalid {
+    -moz-box-shadow: none !important;
+}
+
+textarea {
+	overflow: auto;
+	vertical-align: top;
+	resize: vertical;
+	width: 100%;
+}
+
+select {
+	padding: 3px;
+	min-width: 220px;
+	max-width: 450px;
+	margin: 0;
+
+	optgroup {
+		font-size: 15px;
+	}
+
+	option {
+		font-size: 13.5px;
+	}
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="image"],
+input[type="checkbox"],
+input[type="radio"] {
+	line-height: normal;
+	cursor: pointer;
+	background-color: transparent;
+	border: 0 \9;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+}
+
+input[type="image"] {
+	border: 0;
+}
+
+input[type="file"] {
+	width: auto;
+	padding: initial;
+	line-height: initial;
+	background-color: $input-bg;
+	background-color: initial;
+	border: initial;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+input[type="button"], input[type="reset"], input[type="submit"] {
+	width: auto;
+	height: auto;
+}
+
+input[type="file"] {
+	height: 28px;
+	*margin-top: 4px;
+	line-height: 28px;
+	line-height: 18px \9;
+}
+
+textarea {
+	min-height: 60px;
+	width: 100%;
+
+	&:focus {
+		border: 1px solid #aaa;
+		color: #444;
+		-moz-box-shadow: 0 0 3px rgba(0,0,0,.2);
+		-webkit-box-shadow: 0 0 3px rgba(0,0,0,.2);
+		box-shadow:  0 0 3px rgba(0,0,0,.2);
+		width: 100%;
+	}
+}
+
+input:valid, textarea:valid {
+	background-color: $valid;
+}
+
+input:invalid, textarea:invalid {
+	background-color: $invalid;
+}
+
+input[type="checkbox"], input[type="radio"] {
+	box-sizing: border-box;
+	padding: 0;
+	*width: 13px;
+	*height: 13px;
+	display: inline;
+}
+
+::-webkit-input-placeholder {
+  color: $input-color;
+}
+
+:-moz-placeholder {
+  color: $input-color;
+}
+
+::-moz-placeholder {
+  color: $input-color;
+}
+
+:-ms-input-placeholder {
+  color: $input-color;
+}
+
+button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"] {
+	padding: 5px;
+	background: $button-bg;
+	border: 1px solid $button-border;
+	font-size: 12px;
+	margin: 0;
+	padding: 5px 10px;
+	font-weight: bold;
+
+	&:hover,
+	&:focus {
+		border: 1px solid $button-border-focus;
+		background: $button-bg-focus;
+		}
+	&:active {
+		border: 1px solid $button-border;
+		background: $button-bg;
+	}
+}
+
+button, input, select, textarea {
+	margin: 0;
+	vertical-align: middle;
+}
+
+button, input {
+	*overflow: visible;
+	line-height: normal;
+}
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+	padding: 0; border: 0;
+}
+
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+	cursor: pointer;
+	-webkit-appearance: button;
+}
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+input[type="checkbox"] + label,  input[type="radio"] + label {
+	display: inline;
+	float: none;
+	width: auto;
+}
+
+input[type="radio"] ul li label {
+	display: inline;
+	float: none;
+	width: auto;
+	font-weight: normal;
+}

@@ -1,0 +1,92 @@
+// ==================================================
+// Grid Math
+// ==================================================
+// Grid Values you can go either fluid (%) or fixed (px/em/ex/rem etc.)
+$width: 100%;
+$max-width: 1140px;
+$columns: 12; // If you add/remove columns adjust base grid classes
+$col_margin: 4%;
+$col_margin-right: 2%;
+$col_margin-left: 2%;
+
+// Math & mixins
+$col_width: ($width - ($col_margin * ($columns))) / $columns;
+$col_total_width: $col_width + $col_margin;
+
+@mixin row() {
+	float: left;
+	clear: both;
+	width: $width;
+}
+
+@mixin col($n: 1) {
+	@include span($n);
+	float: left;
+	display: inline;
+}
+
+@mixin span($n: 1) {
+	width: ($n * $col_width) + (($n - 1) * $col_margin);
+	@if $n == $columns {
+		margin-right: 0;
+	}
+
+	@else {
+		margin-left: $col_margin_left;
+		margin-right: $col_margin_right;
+	}
+}
+
+// ==================================================
+// Base Grid
+// ==================================================
+// You can add more columns or less columns just adjust the number above in the Grid Value variables.
+.container      {
+	position: relative;
+	width: $width;
+	max-width: $max-width;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.row { @include row; }
+
+// Nested Column Classes via mixin or class; you choose.
+@mixin first() { margin-left: 0; }
+@mixin last() { margin-right: 0; }
+.firstcol { margin-left: 0 !important; }
+.lastcol { margin-right: 0 !important; }
+
+// Base Grid
+// Note: @extend the .#col class.
+.col1      { @include col(1); }
+.col2      { @include col(2); }
+.col3      { @include col(3); }
+.col4      { @include col(4); }
+.col5      { @include col(5); }
+.col6      { @include col(6); }
+.col7      { @include col(7); }
+.col8      { @include col(8); }
+.col9      { @include col(9); }
+.col10     { @include col(10); }
+.col11     { @include col(11); }
+.col12     { @include col(12); }
+
+// ==================================================
+// Grid Clearing
+// ==================================================
+.container:after {
+	content: "\0020";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.row:after, .clearfix:after {
+	clear: both;
+}
+
+.row, .clearfix {
+	zoom: 1;
+}

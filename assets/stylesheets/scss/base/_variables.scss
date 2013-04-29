@@ -1,0 +1,50 @@
+// ==================================================
+// brand
+// ==================================================
+$brand: #5e9f00;
+$brand-second: #5e9f00;
+$brand-third: #5e9f00;
+
+$selection: #212121;
+
+// ==================================================
+// typography
+// ==================================================
+$font: Arial;
+$font-second: Arial;
+$font-third: Arial;
+
+$text: #212121;
+$heading: #212121;
+$h1: #212121;
+$h2: #212121;
+
+$link: #333;
+$link-hover: #000;
+
+$rule: #212121;
+
+$table-bg: #fff;
+$table-bg-hover: darken($table-bg, 10%);
+
+
+// ==================================================
+// buttons
+// ==================================================
+$button-bg: #eee;
+$button-border: darken($button-bg, 15%);
+
+$button-bg-focus: #e5e5e5;
+$button-border-focus: darken($button-bg-focus, 15%);
+
+
+// ==================================================
+// forms
+// ==================================================
+$valid: none;
+$invalid: #f0dddd;
+
+$input-bg: #fff;
+$input-border: #ccc;
+$input-color: #a4a4a4;
+$label-color: #444;

@@ -1,0 +1,38 @@
+// ==================================================
+// Basic Styles
+// ==================================================
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+::-moz-selection {
+	background: $selection;
+	color: #fff;
+	text-shadow: none;
+}
+
+::selection {
+	background: $selection;
+	color: #fff;
+	text-shadow: none;
+}
+
+body {
+	font: 14px/24px '$font', sans-serif;
+	color: #212121;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-size-adjust: 100%;
+}
+
+
+// ==================================================
+// Responsive Media
+// ==================================================
+img, iframe, object, video {
+	max-width: 100%;
+	height: auto;
+	-ms-interpolation-mode: bicubic;
+	border: 0;
+}
