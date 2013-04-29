@@ -88,9 +88,3 @@ button { width: auto; overflow: visible; }
 .clearfix:after { clear: both; }
 
 .clearfix { zoom: 1; }
-
-body { font-family: 'trebuchet ms', helvetica, arial, sans-serif; }
-
-p { color: green; }
-
-a { color: red; }

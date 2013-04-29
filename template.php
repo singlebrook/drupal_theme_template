@@ -8,7 +8,7 @@
     global $base_url;
 
     $output = $base_url . '/';
-    $output .= drupal_get_path('theme', 'drupal_theme_template') . '/js/livereload.js?';
+    $output .= drupal_get_path('theme', 'drupal_theme_template') . '/assets/javascripts/livereload.js?';
     //  $output .= 'host=' . parse_url($base_url, PHP_URL_HOST);
     $output .= 'host=' . 'localhost';
     $output .= '&port=' . 35777; // Different port than the default livereload.
