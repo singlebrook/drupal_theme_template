@@ -4,3 +4,4 @@ core = 7.x
 
 stylesheets[all][] = css/style.css
 
+setting[dtt_enable_livereload] = false
