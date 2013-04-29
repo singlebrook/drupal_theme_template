@@ -2,5 +2,6 @@ name = drupal_theme_template
 description = "A boilerplate theme for Singlebrook projects."
 core = 7.x
 
-stylesheets[all][] = css/style.css
+stylesheets[all][] = assets/stylesheets/style.css
 
+setting[dtt_enable_livereload] = false
