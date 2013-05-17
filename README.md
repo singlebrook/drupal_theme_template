@@ -16,3 +16,6 @@ SCSS files are already well-organized.  All .scss files are imported into the ma
 This base theme uses Guard to compile the scss into our stylesheets.  When working on scss files, make sure to run `bundle exec guard` in the terminal so that your changes are compiled. (If you run into issues, try running in interactive mode: `bundle exec guard -i`). 
 
 This theme is also equipped to use Livereload when Guard is running. Just make sure that the theme setting "Enable livereload" is checked; by default, it will not be (this is for development only). When you save your scss/css/js files, guard will watch and compile them, and Livereload will see the changes and update your browser automagically. 
+
+## Browser Compatibility
+It is recommended that you add modernizr.js to this theme, so that you can test for support of certain features and handle them gracefully if they are not supported.  Because every project is different, a custom modernizr build should be added to this theme, rather than keeping the entire modernizr.js library within your code.  You can download a custom build at http://modernizr.com/. It can then be added to your theme's info file with the following: `scripts[] = javascripts/modernizr.js`.   
