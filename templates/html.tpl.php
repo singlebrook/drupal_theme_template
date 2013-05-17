@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>"
-<?php print $rdf_namespaces; ?>>
-
+  <!--[if IE 8]><html class="no-js ie8" lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>" <?php print $rdf_namespaces; ?>> <![endif]-->
+  <!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>" <?php print $rdf_namespaces; ?>> <!--<![endif]-->
+  
 <head profile="<?php print $grddl_profile; ?>">
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
