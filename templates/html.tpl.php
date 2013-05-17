@@ -1,8 +1,10 @@
 <!DOCTYPE html>
   <!--[if IE 8]><html class="no-js ie8" lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>" <?php print $rdf_namespaces; ?>> <![endif]-->
   <!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>" <?php print $rdf_namespaces; ?>> <!--<![endif]-->
-  
+
 <head profile="<?php print $grddl_profile; ?>">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
   <?php print $styles; ?>
