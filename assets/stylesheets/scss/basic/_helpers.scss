@@ -24,6 +24,9 @@
   visibility: hidden;
 }
 
+// When you dont want links clickable
+.dead-link { pointer-events: none; }
+
 // Hide only visually, but have it available for screenreaders: h5bp.com/v
 .visuallyhidden {
   border: 0;
@@ -89,32 +92,32 @@
 .quarter-width  { width: 25%; }
 .third-width    { width: 33%; }
 
-.push-left      { margin-left:20px }
-.push-right     { margin-right:20px }
+.push-left      { margin-left: 20px }
+.push-right     { margin-right: 20px }
 
 
 
 // ==================================================
 // basic alignment
 // ==================================================
-.float-left    { float:left }
-.float-right   { float:right }
+.float-left    { float: left }
+.float-right   { float: right }
 
 .alignleft     { float: left; margin: 20px 20px 20px 0;}
 .aligncenter   { text-align: center; clear: both; margin: 20px auto; display: block;}
 .alignright    { float: right; margin: 20px 0px 20px 20px;}
-.alignnone     { margin: 20px 20px 20px 20px;}
+.alignnone     { margin: 20px 0px 20px 0px;}
 
-.clear         { clear:both }
+.clear         { clear: both }
 .center        { margin: 0 auto }
 
 
 // ==================================================
 // text alignment
 // ==================================================
-.text-left    { text-align:left }
-.text-right   { text-align:right }
-.text-center  { text-align:center }
-.text-justify { text-align:justify }
-.underline    { text-decoration:underline }
-.highlight    { background-color:#ffc }
+.text-left    { text-align: left }
+.text-right   { text-align: right }
+.text-center  { text-align: center }
+.text-justify { text-align: justify }
+.underline    { text-decoration: underline }
+.highlight    { background-color: $highlight }

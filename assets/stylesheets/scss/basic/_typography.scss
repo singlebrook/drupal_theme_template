@@ -1,9 +1,9 @@
 // ==================================================
-// Typography
+// headings
 // ==================================================
 h1, h2, h3, h4, h5, h6 {
-	color: $heading;
 	font-weight: normal;
+	line-height: 1.2;
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -11,23 +11,31 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 }
 
 h1 {
-	font-size: 4.6em;
-	line-height: 1.2em;
+	font-size: $h1-size;
+	color: $h1-text;
 	margin-bottom: 14px;
-}
 
-h1 + p {
-	margin-top: -5px;
+	a {
+		color: $h1-link;
+
+		&:hover {
+			color: $h1-link-hover;
+		}
+	}
 }
 
 h2 {
-	font-size: 3.5em;
-	line-height: 1.2em;
+	font-size: $h2-size;
+	color: $h2-text;
 	margin-bottom: 10px;
-}
 
-h2 + p {
-	margin-top: 0px;
+	a {
+		color: $h2-link;
+
+		&:hover {
+			color: $h2-link-hover;
+		}
+	}
 }
 
 h2 + img.alignright,
@@ -42,9 +50,17 @@ h2 + img + p {
 }
 
 h3 {
-	font-size: 2.8em;
-	line-height: 1.2em;
+	font-size: $h3-size;
+	color: $h3-text;
 	margin-bottom: 8px;
+
+	a {
+		color: $h3-link;
+
+		&:hover {
+			color: $h3-link-hover;
+		}
+	}
 }
 
 h3 + img.alignright,
@@ -55,28 +71,53 @@ h3 + img.aligncenter {
 }
 
 h4 {
-	font-size: 2.1em;
-	line-height: 1.2em;
+	font-size: $h4-size;
+	color: $h4-text;
 	margin-bottom: 4px;
-}
 
-h4 + p {
-	margin-top: 0px;
+	a {
+		color: $h4-link;
+
+		&:hover {
+			color: $h4-link-hover;
+		}
+	}
 }
 
 h5 {
-	font-size: 1.7em;
-	line-height: 1.2em;
+	font-size: $h5-size;
+	color: $h5-text;
+
+	a {
+		color: $h5-link;
+
+		&:hover {
+			color: $h5-link-hover;
+		}
+	}
 }
 
 h6 {
-	font-size: 1.4em;
-	line-height: 1.2em;
+	font-size: $h6-size;
+	color: $h6-text;
+
+	a {
+		color: $h6-link;
+
+		&:hover {
+			color: $h6-link-hover;
+		}
+	}
 }
 
+
+// ==================================================
+// content
+// ==================================================
 p {
-	font-size: 1.6em;
-	line-height: 1.5em;
+	font-size: $p-size;
+	line-height: 1.6;
+	color: $p-text;
 	margin-bottom: 20px;
 
 	img {
@@ -91,52 +132,13 @@ p + img.aligncenter {
 	margin-top: 0px;
 }
 
-em {
-	font-style: italic;
-}
-
-b, strong {
-	font-weight: bold;
-}
-
-small {
-	font-size: 1.1em;
-}
-
-sub, sup {
-	font-size: .9em;
-	line-height: 0;
-	position: relative;
-	vertical-align: baseline;
-}
-
-sup {
-	top: -0.5em;
-}
-
-sub {
-	bottom: -0.25em;
-}
-
 hr {
-	border: 1px dotted $rule;
 	clear: both;
-	margin: 10px 0 10px;
 	height: 0;
 	border: 0;
-	border-top: 1px dotted $rule;
-}
-
-dl dt {
-	font-size: 1.6em;
-	font-weight: bold;
-	line-height: 1.2em;
-}
-
-dl dd {
-	margin: 0 0 10px 0;
-	font-size: 1.4em;
-	line-height: 1.4em;
+	border: 1px solid $rule;
+	border-top: 1px solid $rule;
+	margin: 10px 0 10px;
 }
 
 code, pre {
@@ -144,65 +146,27 @@ code, pre {
 }
 
 blockquote {
-	border-left: 10px solid lighten($text, 50%);
+	border-left: 10px solid $blockquote;
 	padding-left: 15px;
 	font-style: italic;
-	color: lighten($text, 25%);
+	color: $blockquote;
 }
 
-// ==================================================
-// tables
-// ==================================================
-table {
-    border-collapse: collapse;
-    font-size: 1.4em;
-    margin: 10px 10px 20px;
-    text-align: left;
-    width: 98%;
+figure {
 
-	th {
-	    background: none repeat scroll 0 0 $table-bg;
-	    color: #212121;
-	    font-size: 1em;
-	    font-weight: bold;
-	    padding: 8px;
-	    text-transform: uppercase;
-	}
-
-	td {
-	    background: none repeat scroll 0 0 $table-bg;
-	    border-top: 1px dotted $rule;
-	    color: $text;
-	    padding: 8px;
-	}
-
-	tbody tr:hover td {
-	    background: none repeat scroll 0 0 $table-bg-hover;
-	}
 }
 
-// ==================================================
-// links
-// ==================================================
-a, a:visited {
-	color: $link;
-	text-decoration:
-	underline;
-	outline: 0;
-}
-a:hover, a:focus {
-	color: $link-hover;
-}
+figcaption {
 
-p a, p a:visited {
-	line-height: inherit;
 }
-
 
 // ==================================================
 // lists
 // ==================================================
-nav ul, nav ol {
+
+//  we use a lot of ULs that aren't bulleted.
+// don't forget to restore the bullets within content.
+nav ul, nav ol, ul, ol {
 	list-style: none;
 	list-style-image: none;
 	margin: 0;
@@ -242,11 +206,140 @@ ul ul li, ul ol li, ol ol li, ol ul li {
 }
 
 li {
-	font-size: 16px;
-	line-height: 18px;
-	margin-bottom: 12px;
 
 	p {
-		line-height: 21px;
+
 	}
+}
+
+dl dt {
+	font-size: 1.6em;
+	font-weight: bold;
+	line-height: 1.2em;
+}
+
+dl dd {
+	margin: 0 0 10px 0;
+	font-size: 1.4em;
+	line-height: 1.4em;
+}
+
+
+// ==================================================
+// links
+// ==================================================
+a, a:visited {
+	color: $link;
+	text-decoration:
+	underline;
+	outline: 0;
+}
+a:hover, a:focus {
+	color: $link-hover;
+}
+
+p a, p a:visited {
+	line-height: inherit;
+}
+
+
+// ==================================================
+// text level semantics
+// ==================================================
+em, i {
+	font-style: italic;
+}
+
+b, strong {
+	font-weight: bold;
+}
+
+small {
+	font-size: 1.1em;
+}
+
+cite {
+
+}
+
+q {
+
+}
+
+sub, sup {
+	font-size: .9em;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup {
+	top: -0.5em;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+
+// ==================================================
+// embedded content
+// ==================================================
+img, iframe, object, video {
+	max-width: 100%;
+	height: auto;
+	-ms-interpolation-mode: bicubic;
+	border: 0;
+}
+
+
+// ==================================================
+// tables
+// ==================================================
+table {
+    border-collapse: collapse;
+    font-size: 1.4em;
+    margin: 10px 10px 20px;
+    text-align: left;
+    width: 100%;
+
+  thead {
+
+  }
+
+  caption {
+
+  }
+
+	th {
+	    background: none repeat scroll 0 0 $table-bg;
+	    color: #212121;
+	    font-size: 1em;
+	    font-weight: bold;
+	    padding: 8px;
+	    text-transform: uppercase;
+	}
+
+	td {
+	    background: none repeat scroll 0 0 $table-bg;
+	    border-top: 1px dotted $rule;
+	    color: $td-text;
+	    padding: 8px;
+	}
+
+	tbody tr:hover td {
+	    background: none repeat scroll 0 0 $table-bg-hover;
+	}
+}
+
+
+// ==================================================
+// interactive elements
+// ==================================================
+details {
+
+}
+
+summary {
+
 }
