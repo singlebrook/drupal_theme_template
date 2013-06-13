@@ -1,6 +1,3 @@
-// ==================================================
-// Forms
-// ==================================================
 form {
 	margin: 20px 0;
 }
@@ -9,16 +6,10 @@ fieldset {
 	margin: 0 0 10px 0;
 	padding: 0 0 10px 0;
 	border: 0;
-	border-bottom: 1px solid #eee;
 }
 
 label, legend {
 	display: block;
-	font-weight: bold;
-}
-
-li label {
-	font-size: inherit;
 }
 
 label span,
@@ -43,29 +34,26 @@ input[type="file"],
 input[type="range"],
 input[id="text_inline"],
 textarea, {
-	border: 1px solid $input-border;
-	padding: 6px 4px;
-	outline: none;
-	color: $input-color;
-	margin: 0;
-	min-width: 210px;
-	max-width: 100%;
-	min-height: 25px;
 	display: block;
-	margin-bottom: 20px;
+	outline: none;
+	min-width: $form-item-min-width;
+	width: 100%;
 	background: $input-bg;
-	font-size: 12px;
+	border: 1px solid $input-border;
+	font-size: $input-size;
+	line-height: 1;
+	color: $input-color;
+	padding: 10px;
+	margin-bottom: 20px;
 
 	&:focus {
-		line-height: normal;
 		cursor: pointer;
-		background-color: transparent;
 	}
 }
 
 // Removes the red outline
 input:invalid {
-    -moz-box-shadow: none !important;
+   -moz-box-shadow: none !important;
 }
 
 textarea {
@@ -73,12 +61,13 @@ textarea {
 	vertical-align: top;
 	resize: vertical;
 	width: 100%;
+	min-height: 60px;
 }
 
 select {
 	padding: 3px;
-	min-width: 220px;
-	max-width: 450px;
+	min-width: $form-item-min-width;
+	width: 100%;
 	margin: 0;
 
 	optgroup {
@@ -98,11 +87,6 @@ input[type="checkbox"],
 input[type="radio"] {
 	line-height: normal;
 	cursor: pointer;
-	background-color: transparent;
-	border: 0 \9;
-	-webkit-border-radius: 0;
-	-moz-border-radius: 0;
-	border-radius: 0;
 }
 
 input[type="image"] {
@@ -114,11 +98,7 @@ input[type="file"] {
 	padding: initial;
 	line-height: initial;
 	background-color: $input-bg;
-	background-color: initial;
 	border: initial;
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
-	box-shadow: none;
 }
 
 input[type="button"], input[type="reset"], input[type="submit"] {
@@ -131,20 +111,6 @@ input[type="file"] {
 	*margin-top: 4px;
 	line-height: 28px;
 	line-height: 18px \9;
-}
-
-textarea {
-	min-height: 60px;
-	width: 100%;
-
-	&:focus {
-		border: 1px solid #aaa;
-		color: #444;
-		-moz-box-shadow: 0 0 3px rgba(0,0,0,.2);
-		-webkit-box-shadow: 0 0 3px rgba(0,0,0,.2);
-		box-shadow:  0 0 3px rgba(0,0,0,.2);
-		width: 100%;
-	}
 }
 
 input:valid, textarea:valid {
@@ -185,23 +151,21 @@ input[type="button"],
 input[type="reset"] {
 	padding: 5px;
 	background: $button-bg;
-	border: 1px solid $button-border;
 	font-size: 12px;
 	margin: 0;
 	padding: 5px 10px;
-	font-weight: bold;
 
-	&:hover,
-	&:focus {
-		border: 1px solid $button-border-focus;
+	&:hover, &:focus {
 		background: $button-bg-focus;
-		}
+	}
+
 	&:active {
-		border: 1px solid $button-border;
 		background: $button-bg;
 	}
 }
 
+
+// Normalizing styles
 button, input, select, textarea {
 	margin: 0;
 	vertical-align: middle;

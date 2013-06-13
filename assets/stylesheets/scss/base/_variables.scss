@@ -6,45 +6,76 @@ $brand-second: #5e9f00;
 $brand-third: #5e9f00;
 
 $selection: #212121;
+$highlight: #ffc;
 
 // ==================================================
 // Typography
 // ==================================================
-$font: Arial;
-$font-second: Arial;
-$font-third: Arial;
+$font: Arial, sans-serif;
+$font-second: Arial, sans-serif;
+$font-third: Arial, sans-serif;
 
-$text: #212121;
-$heading: #212121;
-$h1: #212121;
-$h2: #212121;
+$h1-size: 4.6em;
+$h2-size: 3.5em;
+$h3-size: 2.8em;
+$h4-size: 2.1em;
+$h5-size: 1.7em;
+$h6-size: 1.4em;
+
+$h1-text: #212121;
+$h2-text: #212121;
+$h3-text: #212121;
+$h4-text: #212121;
+$h5-text: #212121;
+$h6-text: #212121;
+
+$h1-link: #212121;
+$h2-link: #212121;
+$h3-link: #212121;
+$h4-link: #212121;
+$h5-link: #212121;
+$h6-link: #212121;
+
+$h1-link-hover: #212121;
+$h2-link-hover: #212121;
+$h3-link-hover: #212121;
+$h4-link-hover: #212121;
+$h5-link-hover: #212121;
+$h6-link-hover: #212121;
+
+$p-text: #212121;
+$p-size: 1.6em;
 
 $link: #333;
 $link-hover: #000;
 
 $rule: #212121;
 
+$blockquote: #444;
+
 $table-bg: #fff;
 $table-bg-hover: darken($table-bg, 10%);
+$td-text: #444;
 
 
 // ==================================================
 // Buttons
 // ==================================================
 $button-bg: #eee;
-$button-border: darken($button-bg, 15%);
-
 $button-bg-focus: #e5e5e5;
-$button-border-focus: darken($button-bg-focus, 15%);
 
 
 // ==================================================
 // Forms
 // ==================================================
 $valid: none;
-$invalid: #f0dddd;
+$invalid: #f0dddd; // red
 
 $input-bg: #fff;
 $input-border: #ccc;
 $input-color: #a4a4a4;
 $label-color: #444;
+
+$input-size: 1.6em;
+
+$form-item-min-width: 220px;
