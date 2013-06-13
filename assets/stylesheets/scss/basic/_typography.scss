@@ -72,7 +72,7 @@ h3 + img.aligncenter {
 
 h4 {
 	font-size: $h4-size;
-	color: $h4;
+	color: $h4-text;
 	margin-bottom: 4px;
 
 	a {
@@ -86,7 +86,7 @@ h4 {
 
 h5 {
 	font-size: $h5-size;
-	color: $h5;
+	color: $h5-text;
 
 	a {
 		color: $h5-link;
@@ -99,7 +99,7 @@ h5 {
 
 h6 {
 	font-size: $h6-size;
-	color: $h6;
+	color: $h6-text;
 
 	a {
 		color: $h6-link;
