@@ -1,6 +1,6 @@
 # Drupal Theme Template
-Developed at Singlebrook
-A starting point for Drupal projects involving new themes. For more detailed information, see http://singlebrook.com/blog/maintaining-your-sanity-while-theming-in-drupal. 
+*Developed at Singlebrook.*
+A starting point for Drupal projects involving new themes. For more detailed information, see [this blog post](http://singlebrook.com/blog/maintaining-your-sanity-while-theming-in-drupal). 
 
 ## Setup
 There is little setup involved for this theme. You shouldn't have to alter `config.rb` or the Guardfile unless you alter the structure of the folders in the assets directory. 
